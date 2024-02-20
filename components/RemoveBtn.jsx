@@ -10,13 +10,16 @@ export default function RemoveBtn(props) {
       return;
     }
     try {
-      const res = await fetch(`http://localhost:3000/api/list?id=${props.id}`, {
-        cache: "no-store",
-        method: "DELETE",
-        headers: {
-          "content-type": "application/json",
-        },
-      });
+      const res = await fetch(
+        `https://prupreti.vercel.app/api/list?id=${props.id}`,
+        {
+          cache: "no-store",
+          method: "DELETE",
+          headers: {
+            "content-type": "application/json",
+          },
+        }
+      );
       if (!res.ok) {
         throw new Error("Couldn't Delete");
       } else {
@@ -25,7 +28,7 @@ export default function RemoveBtn(props) {
     } catch (error) {
       console.log(error);
     }
-    console.log(`http://localhost:3000/api/list?id=${props.id}`);
+    console.log(`https://prupreti.vercel.app/api/list?id=${props.id}`);
   };
   return (
     <button onClick={deleteItem} className="text-red-400">

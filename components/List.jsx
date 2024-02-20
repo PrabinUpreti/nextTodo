@@ -4,7 +4,7 @@ import { HiPencilAlt } from "react-icons/hi";
 
 const getLists = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/list", {
+    const res = await fetch("https://prupreti.vercel.app/api/list", {
       cache: "no-store",
     });
 

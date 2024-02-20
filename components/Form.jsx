@@ -9,7 +9,7 @@ const switchTool = (param) => {
   if (param.action == "edit") {
     sw = {
       ...sw,
-      url: `http://localhost:3000/api/list/${param.id}`,
+      url: `https://prupreti.vercel.app/api/list/${param.id}`,
       initialDecription: param.decription,
       initialItem: param.item,
       method: "PUT",
@@ -19,7 +19,7 @@ const switchTool = (param) => {
   } else {
     sw = {
       ...sw,
-      url: `http://localhost:3000/api/list`,
+      url: `https://prupreti.vercel.app/api/list`,
       initialDecription: "",
       initialItem: "",
       method: "POST",

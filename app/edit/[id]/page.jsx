@@ -2,7 +2,7 @@ import Form from "@/components/Form";
 
 const getItemById = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/list/${id}`, {
+    const res = await fetch(`https://prupreti.vercel.app/api/list/${id}`, {
       method: "GET",
     });
     if (!res.ok) {
